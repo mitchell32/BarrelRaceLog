@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/horse_popup_element"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="100dip"
+        android:paddingBottom="100dip"
+        android:padding="10dp"
+        android:background="@color/colorPrimaryDark"
+        android:layout_marginTop="89dp"
+        android:id="@+id/linearLayout"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#372c24"
+            android:text="Add horse"
+            android:textSize="25sp"
+            android:paddingTop="5dip"
+            android:paddingBottom="5dip"
+            android:id="@+id/textView" />
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:background="@drawable/edittext_rounded_corners"
+            android:inputType="text"
+            android:id="@+id/edit_horse"
+            android:hint="Enter horse's name"
+            android:layout_below="@+id/textView"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cancel_horse"
+            android:text="Cancel"
+            android:onClick="onClick"
+            android:layout_marginLeft="63dp"
+            android:layout_marginStart="63dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="20dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/add_horse"
+            android:text="Add"
+            android:onClick="onClick"
+            android:layout_marginLeft="44dp"
+            android:layout_marginStart="44dp"
+            android:layout_alignBaseline="@+id/cancel_horse"
+            android:layout_alignBottom="@+id/cancel_horse"
+            android:layout_toRightOf="@+id/cancel_horse"
+            android:layout_toEndOf="@+id/cancel_horse" />
+
+
+    </RelativeLayout>
+</RelativeLayout>
