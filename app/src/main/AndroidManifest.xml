@@ -20,6 +20,12 @@
 
         <activity android:name=".HorseActivity"></activity>
 
+        <activity android:name=".LocationActivity"></activity>
+
+        <activity android:name=".RaceActivity"></activity>
+
+        <activity android:name=".SpecificRaceActivity"></activity>
+
     </application>
 
 

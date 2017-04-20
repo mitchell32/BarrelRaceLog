@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.app.ListActivity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -94,6 +95,16 @@ public class HorseActivity extends Activity {
 
         MyAdapter adapter = new MyAdapter(this);
         gridView.setAdapter(adapter);
+
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id){
+                // ADD WAY TO RETRIEVE HORSE NAME TO SEND TO NEXT ACTIVITY
+                Intent intent = new Intent(getApplicationContext(), LocationActivity.class);
+                //intent.putExtra("HORSE_DETAILS", )
+                startActivity(intent);
+            }
+        });
     }
 
     //METHOD WHICH WILL HANDLE DYNAMIC INSERTION
@@ -115,6 +126,14 @@ public class HorseActivity extends Activity {
                 String horseName = editText.getText().toString();
 
 
+                dialog.dismiss();
+            }
+        });
+
+        btnCancel.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v)
+            {
+                dialog.dismiss();
             }
         });
     }
