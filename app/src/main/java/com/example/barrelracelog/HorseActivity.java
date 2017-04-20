@@ -95,4 +95,28 @@ public class HorseActivity extends Activity {
         MyAdapter adapter = new MyAdapter(this);
         gridView.setAdapter(adapter);
     }
+
+    //METHOD WHICH WILL HANDLE DYNAMIC INSERTION
+    public void addHorse(View v){
+        final Dialog dialog = new Dialog(this);
+        dialog.setContentView(R.layout.add_horse_popup);
+        Button btnAdd = (Button) dialog.findViewById(R.id.add_horse);
+        Button btnCancel = (Button) dialog.findViewById(R.id.cancel_horse);
+
+        dialog.show();
+
+        btnAdd.setOnClickListener(new View.OnClickListener(){
+
+            /* Check if add button is pressed before entering a name and make sure that
+            it does not get added to the horse name list
+             */
+            public void onClick(View v){
+                EditText editText = (EditText) dialog.findViewById(R.id.edit_horse);
+                String horseName = editText.getText().toString();
+
+
+            }
+        });
+    }
+
 }
