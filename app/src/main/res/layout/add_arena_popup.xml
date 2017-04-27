@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:id="@+id/arena_popup_view">
 
     <RelativeLayout
@@ -14,10 +14,8 @@
         android:paddingBottom="100dip"
         android:padding="10dp"
         android:background="@color/colorPrimaryDark"
-        android:layout_marginTop="89dp"
         android:id="@+id/linearLayout"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
         <TextView
