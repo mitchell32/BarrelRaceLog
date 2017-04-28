@@ -57,14 +57,20 @@ public class LocationActivity extends ListActivity {
         Button btnCancel = (Button) dialog.findViewById(R.id.cancel_arena);
 
         dialog.show();
+
+        // ***************** METHOD THAT WILL ADD THE ARENA NAME TO THE DATABASE *************s
         btnAdd.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
                 EditText editText = (EditText) dialog.findViewById(R.id.edit_arena);
                 String arenaName = editText.getText().toString();
-                listItems.add(arenaName);
-                adapter.notifyDataSetChanged();
-                dialog.dismiss();
+                if(!arenaName.equals("")) {
+                    listItems.add(arenaName);
+                    adapter.notifyDataSetChanged();
+                    dialog.dismiss();
+                }else{
+                    dialog.dismiss();
+                }
             }
 
         });
